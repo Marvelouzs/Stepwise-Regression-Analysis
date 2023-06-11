@@ -1,6 +1,6 @@
-# streamlit_Stepwise_Analysis Regression
-Streamlit Stepwise Analysis Regression
+# Streamlit Stepwise Regression Analysis
 
+Dataasets : factbook.csv
 
 ### How to Run?
 
@@ -12,7 +12,7 @@ pip3 install --upgrade streamlit
 
 Download / Clone the Repo and enter into the folder with your `Terminal` or `Shell`
 
-Run `streamlit run pasdf.py` 
+Run `streamlit run pasdf.py` or `python -m streamlit run pasd.py` 
 
 Open the given link in the terminal and enjoy your 📈
 
