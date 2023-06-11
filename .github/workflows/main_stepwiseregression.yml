@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'StepwiseRegression'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AEA316295FE84E63B516699C44652F0F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66466CC194F24E7FA865C5E4064FB38E }}
