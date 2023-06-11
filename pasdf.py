@@ -4,7 +4,7 @@ import scipy.stats as stats
 from numpy.linalg import inv
 import streamlit as st
 
-st.title('Stepwise Regression')
+st.title('Stepwise Regression Factbook.csv')
 
 # Functions
 def clean_data(df):
@@ -47,11 +47,11 @@ def calculate_f(Rb, sse, n, k): return Rb / (sse / (n - k - 1))
 # Read data
 data = pd.read_csv("factbookv2.csv")
 
-kolom1 = st.selectbox('Variable dependent 1', list(data.columns), index=list(data.columns).index('Exports'))
-kolom2 = st.selectbox('Variable dependent 2', list(data.columns), index=list(data.columns).index('Imports'))
-kolom3 = st.selectbox('Variable dependent 3', list(data.columns), index=list(data.columns).index('Industrial production growth rate'))
-kolom4 = st.selectbox('Variable dependent 4', list(data.columns), index=list(data.columns).index('Investment'))
-kolom5 = st.selectbox('Variable dependent 5', list(data.columns), index=list(data.columns).index('Unemployment rate'))
+kolom1 = st.selectbox('X1', list(data.columns), index=list(data.columns).index('Exports'))
+kolom2 = st.selectbox('X2', list(data.columns), index=list(data.columns).index('Imports'))
+kolom3 = st.selectbox('X3', list(data.columns), index=list(data.columns).index('Industrial production growth rate'))
+kolom4 = st.selectbox('X4', list(data.columns), index=list(data.columns).index('Investment'))
+kolom5 = st.selectbox('X5', list(data.columns), index=list(data.columns).index('Unemployment rate'))
 
 # Filter and process the data
 df = clean_data(data[["GDP", kolom1, kolom2, kolom3, kolom4, kolom5]])
@@ -176,7 +176,7 @@ st.write('f dari tabel:',f_table)
 # Calculate final model coefficients
 bfinal = calculate_b(create_X(df, kolom1, kolom2, kolom3), np.array([df['GDP']]).T)
 st.title('Hasil akhir')
-st.write('b0 =',bfinal[0][0])
-st.write('b1 =',bfinal[1][0])
-st.write('b2 =',bfinal[2][0])
-st.write('b3 =',bfinal[3][0])
+st.write('X0 =',bfinal[0][0])
+st.write('X1 =',bfinal[1][0])
+st.write('X2 =',bfinal[2][0])
+st.write('X3 =',bfinal[3][0])
